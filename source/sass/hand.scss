@@ -1,0 +1,27 @@
+.hand {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  flex-basis: 25%;
+  flex-shrink: 1;
+  height: 185px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hand__card {
+  background-image: url("../img/Cards/_Back.png");
+  background-size: cover;
+  background-origin: border-box;
+  width: 126px;
+  height: 178px;
+  margin: 5px;
+}
+
+
+.hand__player .hand__card {
+  &:not(:first-child) {
+    margin-left: -25px;
+  }
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.wrapper__card {
+  flex-basis: 100%;
+  justify-content: space-around;
+}
+
+.wrapper__contorls {
+  flex-basis: 20%;
+}
+
+.wrapper__hand {
+  justify-content: space-between;
+  width: 100%;
+}

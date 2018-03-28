@@ -1,0 +1,20 @@
+.deck {
+  position: relative;
+}
+
+.deck__unit {
+  background-image: url("../img/Cards/_Back.png");
+  background-size: cover;
+  background-origin: border-box;
+  width: 126px;
+  height: 178px;
+  margin: 5px;
+  position: relative;
+}
+
+.deck__unit--trump {
+  top: 0;
+  left: -25px;
+  position: absolute;
+  transform: rotate(90deg);
+}
