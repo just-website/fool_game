@@ -19,6 +19,10 @@
   margin: 5px;
 }
 
+.card__unit[data-visible="true"] {
+  background-image: url("../img/Cards/c14.png");
+}
+
 // .hand__card--over {
 //   position: relative;
 // }

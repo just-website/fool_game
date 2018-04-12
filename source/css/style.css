@@ -39,7 +39,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.card {
+.card, .hand {
   border: 2px solid #ffffff;
   border-radius: 10px;
   -ms-flex-preferred-size: 25%;
@@ -61,7 +61,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.card__unit {
+.card__unit, .hand__card, .deck__unit {
   background-image: url("../img/Cards/_Back.png");
   background-size: cover;
   background-origin: border-box;
@@ -69,7 +69,12 @@ body {
   height: 178px;
   margin: 5px; }
 
+.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
+  background-image: url("../img/Cards/c14.png"); }
+
 .popup {
+  text-align: center;
+  font-size: 30px;
   display: none;
   width: 500px;
   padding: 30px;
@@ -84,8 +89,7 @@ body {
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
 
-.popup p {
-  text-align: center;
+.popup select {
   font-size: 30px; }
 
 .popup button {
@@ -152,7 +156,7 @@ body {
           justify-content: space-between;
   width: 100%; }
 
-.hand {
+.card, .hand {
   border: 2px solid #ffffff;
   border-radius: 10px;
   -ms-flex-preferred-size: 25%;
@@ -174,7 +178,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row; }
 
-.hand__card {
+.card__unit, .hand__card, .deck__unit {
   background-image: url("../img/Cards/_Back.png");
   background-size: cover;
   background-origin: border-box;
@@ -182,19 +186,49 @@ body {
   height: 178px;
   margin: 5px; }
 
+.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
+  background-image: url("../img/Cards/c14.png"); }
+
 .hand__player .hand__card:not(:first-child) {
   margin-left: -25px; }
 
-.deck {
-  position: relative; }
+.card, .hand {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  height: 185px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 
-.deck__unit {
+.card__unit, .hand__card, .deck__unit {
   background-image: url("../img/Cards/_Back.png");
   background-size: cover;
   background-origin: border-box;
   width: 126px;
   height: 178px;
-  margin: 5px;
+  margin: 5px; }
+
+.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
+  background-image: url("../img/Cards/c14.png"); }
+
+.deck {
+  position: relative; }
+
+.deck__unit {
   position: relative; }
 
 .deck__unit--trump {

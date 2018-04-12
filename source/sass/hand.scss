@@ -1,24 +1,12 @@
+@import "card";
+
 .hand {
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  flex-basis: 25%;
-  flex-shrink: 1;
-  height: 185px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  @extend .card;
 }
 
 .hand__card {
-  background-image: url("../img/Cards/_Back.png");
-  background-size: cover;
-  background-origin: border-box;
-  width: 126px;
-  height: 178px;
-  margin: 5px;
+  @extend .card__unit;
 }
-
 
 .hand__player .hand__card {
   &:not(:first-child) {

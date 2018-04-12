@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <div class="container">
+  <div id="gameField" class="container">
 
     <div class="wrapper wrapper__hand">
       <div class="hand hand__cpu hand__cpu--1">
@@ -35,7 +35,7 @@
       <div class="wrapper wrapper__card">
 
         <div class="card">
-          <div class="card__unit"></div>
+          <div class="card__unit" data-visible="true"></div>
         </div>
 
         <div class="card">
@@ -86,9 +86,19 @@
 
   </div>
 
-    <div class="popup popup--new">
+    <div id="start" class="popup popup--new popup--active">
       <p>Добро пожаловать в игру!</p>
-      <button type="button" name="button">Начать</button>
+      <form action="get">
+        <p>
+          Выбирите количество соперников
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </p>
+        <button type="button" name="button">Начать</button>
+      </form>
     </div>
 
     <div class="popup popup--resume">
@@ -98,8 +108,8 @@
       <button type="button" name="button">Сыграть ещё</button>
     </div>
 
-    <script type="text/javascript" src="js/script.js">
-
-    </script>
+    <script src="js/GameField.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

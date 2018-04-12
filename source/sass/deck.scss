@@ -1,14 +1,11 @@
+@import "card";
+
 .deck {
   position: relative;
 }
 
 .deck__unit {
-  background-image: url("../img/Cards/_Back.png");
-  background-size: cover;
-  background-origin: border-box;
-  width: 126px;
-  height: 178px;
-  margin: 5px;
+  @extend .card__unit;
   position: relative;
 }
 
