@@ -8,8 +8,15 @@
   @extend .card__unit;
 }
 
-.hand__player .hand__card {
+.hand__player .hand__card,
+.hand__cpu .hand__card {
   &:not(:first-child) {
-    margin-left: -25px;
+    margin-left: -100px;
   }
 }
+// 
+// .hand__cpu .hand__card {
+//   &:not(:first-child) {
+//     margin-left: -100px;
+//   }
+// }

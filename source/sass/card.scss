@@ -17,12 +17,14 @@
   width: 126px;
   height: 178px;
   margin: 5px;
+  cursor: pointer;
 }
 
-.card__unit[data-visible="true"] {
-  background-image: url("../img/Cards/c14.png");
+.card__unit[data-visible="false"] {
+  background-image: url("../img/Cards/_Back.png");
+  cursor: default;
 }
 
-// .hand__card--over {
-//   position: relative;
-// }
+.hand__card--over {
+  position: relative;
+}

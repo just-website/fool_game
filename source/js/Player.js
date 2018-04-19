@@ -6,8 +6,11 @@ class Player {
     this.active = true;
   }
 
-  getCard() {
-
+  getCards(cardsStack) { // пока карт меньше cardsStackSize, берём карты из колоды
+    while (this.cards.length < Player.cardsStackSize && cardsStack.length > 0) {
+      this.cards.push(cardsStack.shift())
+    }
+    console.log(cardsStack.length);
   }
 
   setCard() {
@@ -15,6 +18,8 @@ class Player {
   }
 
 }
+
+Player.cardsStackSize = 6;
 
 class PlayerAi extends Player {
   constructor(name='computer') {

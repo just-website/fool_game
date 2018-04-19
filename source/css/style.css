@@ -67,10 +67,15 @@ body {
   background-origin: border-box;
   width: 126px;
   height: 178px;
-  margin: 5px; }
+  margin: 5px;
+  cursor: pointer; }
 
-.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
-  background-image: url("../img/Cards/c14.png"); }
+.card__unit[data-visible="false"], .hand__card[data-visible="false"], .deck__unit[data-visible="false"] {
+  background-image: url("../img/Cards/_Back.png");
+  cursor: default; }
+
+.hand__card--over {
+  position: relative; }
 
 .popup {
   text-align: center;
@@ -184,13 +189,19 @@ body {
   background-origin: border-box;
   width: 126px;
   height: 178px;
-  margin: 5px; }
+  margin: 5px;
+  cursor: pointer; }
 
-.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
-  background-image: url("../img/Cards/c14.png"); }
+.card__unit[data-visible="false"], .hand__card[data-visible="false"], .deck__unit[data-visible="false"] {
+  background-image: url("../img/Cards/_Back.png");
+  cursor: default; }
 
-.hand__player .hand__card:not(:first-child) {
-  margin-left: -25px; }
+.hand__card--over {
+  position: relative; }
+
+.hand__player .hand__card:not(:first-child),
+.hand__cpu .hand__card:not(:first-child) {
+  margin-left: -100px; }
 
 .card, .hand {
   border: 2px solid #ffffff;
@@ -220,10 +231,15 @@ body {
   background-origin: border-box;
   width: 126px;
   height: 178px;
-  margin: 5px; }
+  margin: 5px;
+  cursor: pointer; }
 
-.card__unit[data-visible="true"], .hand__card[data-visible="true"], .deck__unit[data-visible="true"] {
-  background-image: url("../img/Cards/c14.png"); }
+.card__unit[data-visible="false"], .hand__card[data-visible="false"], .deck__unit[data-visible="false"] {
+  background-image: url("../img/Cards/_Back.png");
+  cursor: default; }
+
+.hand__card--over {
+  position: relative; }
 
 .deck {
   position: relative; }

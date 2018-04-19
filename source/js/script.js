@@ -1,21 +1,20 @@
-//помимо скрипта есть два класса Player и GameField
 window.onload = function() {
   let gameField;
-  const startPopup = document.querySelector('#start');
-  const options = {};
+  const START_POPUP = document.querySelector('#start');
+  const OPTIONS = {};
 
-  startPopup.querySelector('button').onclick = function() {
-    options.players = startPopup.querySelector('select').value;
-    options.field = document.querySelector('#gameField');
-    startPopup.classList.remove('popup--active');
-    gameField = new GameField(options);
+  START_POPUP.querySelector('button').onclick = function() {
+    OPTIONS.playersCount = START_POPUP.querySelector('select').value;
+    OPTIONS.field = document.querySelector('#gameField');
+    START_POPUP.classList.remove('popup--active');
+    gameField = new GameField(OPTIONS);
 
-    const players = gameField.addPlayers( new PlayerAi()); // может эту переменную сделать отдельным классом?
-    players.unshift(new Player());
+    const PLAYERS = gameField.addPlayers(PlayerAi); //добавляем игроков ПК
+    PLAYERS.unshift(new Player()); // добавляем игрока
+    gameField.dealCards(PLAYERS, 'getCards');
+    gameField.showPlayers(PLAYERS);
 
-    console.log(players);
-
-    // gameField.dealCards();
+    console.log(PLAYERS);
   }
 
 }
